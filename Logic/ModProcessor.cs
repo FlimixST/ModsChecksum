@@ -85,7 +85,7 @@ namespace ModsChecksum.Logic
                 if (matchedFingerprints.Contains(mod.Value))
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("  [✓] ");
+                    Console.Write("  [+] ");
                     Console.ResetColor();
                     Console.WriteLine($"{fileName} (CurseForge)");
                     curseForgeCount++;
@@ -97,14 +97,14 @@ namespace ModsChecksum.Logic
                     {
                         case ModrinthCheckResult.Valid:
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.Write("  [✓] ");
+                            Console.Write("  [+] ");
                             Console.ResetColor();
                             Console.WriteLine($"{fileName} (Modrinth)");
                             modrinthCount++;
                             break;
                         case ModrinthCheckResult.NotFound:
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write("  [✗] ");
+                            Console.Write("  [-] ");
                             Console.ResetColor();
                             Console.WriteLine($"{fileName} (Не найден)");
                             notFoundCount++;
